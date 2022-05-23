@@ -1,0 +1,13 @@
+2 3 22 33 44 55 
+
+55 element of linked list is deleted
+44 element of linked list is deleted
+33 element of linked list is deleted
+22 element of linked list is deleted
+3 element of linked list is deleted
+2 element of linked list is deleted
+List is empty :(
+
+
+1000 1000 
+
