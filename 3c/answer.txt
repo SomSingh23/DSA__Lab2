@@ -9,5 +9,8 @@
 List is empty :(
 
 
-1000 1000 
+1000 101 
+
+101 element of linked list is deleted
+1000 
 
