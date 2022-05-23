@@ -67,9 +67,20 @@ int main(){
    }
    
 
-   display();
+ 
+    display()  ;
 
-   pop();pop();pop(); pop();pop();pop(); display();
-   push(1000);push(101);   display(); pop() ; 
+      pop();pop();pop(); pop();pop();pop();
+
+    display();
+
+   push(1000);push(101); 
+
+     display();
+
+      pop() ; 
+
   display();
+  return 0; 
+
 }
