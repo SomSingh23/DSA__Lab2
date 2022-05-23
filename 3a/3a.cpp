@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std ;
+ofstream output("answer.txt" , ios::trunc);
 class node{
 public:
 int studentId;
@@ -9,40 +10,37 @@ node *next ;
 };
 
 node *first , *last ;
-void create( int p[]  , int b[] , string c[] , int size){
-  node *ptr = new node ;
+void create(int *p ,int *q , string *s, int size ) {
+     node *ptr = new node ;
      first = ptr ;
-     ptr->marks = p[size] ;
-     ptr->studentId = b[size] ;
-     ptr->name = c[size] ;
+     ptr->marks = p[size-1] ;
+     ptr->studentId = q[size -1] ;
+     ptr->name = s[size-1] ;
      ptr->next = nullptr ;
      last = ptr ; 
-for(int i = size-1 ; i>=0; i--){
+for(int i = size-2 ; i>=0 ; i--){
     node *ptr = new node ;
     ptr->marks = *(p+i);
-    ptr->studentId = *(b+i) ;
-     ptr->name = *(c+i) ;
+     ptr->studentId = *(q+i) ;
+     ptr->name =*(s+i)  ;
    last->next = ptr ;
     last = ptr ;
     last->next = nullptr ;
 
 }}
-void touch(){
-    cout<<"touched here"<<endl;
-}
-void display(node *ptr){
-  cout<<"Checked"<<endl;
+void display(node *ptr ){
+int k = 1 ;
     while (ptr!=nullptr)
-    {
-        cout<<ptr->studentId<<" ";
+    {output<<"RANK "<<k<<" : "<<ptr->name<<endl;
+    k++;
+       
         ptr=ptr->next ;
         /* code */
     }
     
 }
-int main(){
-   // here goes the code 
-
+int main(){ 
+// here goes the code 
 // reading a file
 // c++ ifstream 
 ifstream input("list_of_student.txt");
@@ -62,9 +60,9 @@ for(int i = 0 ; i<no_of_student ; i++){
 
 }
 //output file
-ofstream output("answer.txt" , ios::trunc);
 
-output<<endl;
+
+output<<"Rank of students according to question :-"<<endl;
 output<<endl;
 // bubble sort implement here :)
 int x , y ;
@@ -93,16 +91,10 @@ nameOfStudent[outer] = s ;
 }
 
 
-for(int i = 0 ; i<no_of_student ; i++){
-  output<<idOfStudent[i]<<endl;;
- output<<nameOfStudent[i]<<endl;
- output<<marksOfStudent[i]<<endl;
-   
+}
 
-}
-create(marksOfStudent ,idOfStudent, nameOfStudent , no_of_student);
+
+create(marksOfStudent , idOfStudent , nameOfStudent,no_of_student);
 display(first);
-cout<<first<<endl;
-touch();
-return 0 ;
-}
+
+return 0 ;}

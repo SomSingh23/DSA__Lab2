@@ -1,17 +1,7 @@
+Rank of student according to question
 
-
-1
-som_singh_lodh
-90
-3
-soham
-92
-5
-srijan
-100
-4
-srushti
-100
-2
-sourish
-101
+RANK 1 : sourish
+RANK 2 : srijan
+RANK 3 : soham
+RANK 4 : som
+RANK 5 : srushti
