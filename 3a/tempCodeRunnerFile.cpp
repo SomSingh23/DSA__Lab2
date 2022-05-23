@@ -1,0 +1,2 @@
+output<<idOfStudent[i]<<endl;;
+//   
