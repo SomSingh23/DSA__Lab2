@@ -59,7 +59,7 @@ void mergeTwoSortedList(){// cout<<"madhar cod"<<endl;
     if(first->data>=second->data){ 
        third = second ;
        endptr = second ;
-             cout<<third->data <<endl;
+            
         second=second->next ; endptr->next = nullptr ;
         
     }
