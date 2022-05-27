@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std ;
-ofstream output("answer.txt" , ios::trunc);
+    
 class node{
 public:
 int studentId;
@@ -28,22 +28,23 @@ for(int i = size-2 ; i>=0 ; i--){
     last->next = nullptr ;
 
 }}
-void display(node *ptr ){
-int k = 1 ;
-    while (ptr!=nullptr)
-    {output<<"RANK "<<k<<" : "<<ptr->name<<endl;
-    k++;
+// void display(node *ptr ){ 
+// int k = 1 ;
+//     while (ptr!=nullptr)
+//     {output<<"RANK "<<k<<" : "<<ptr->name<<endl;
+//     k++;
        
-        ptr=ptr->next ;
-        /* code */
-    }
+//         ptr=ptr->next ;
+//         /* code */
+//     }
     
-}
-int main(){ 
+// }
+int main(int argc , char *argv[]){ 
+
 // here goes the code 
 // reading a file
 // c++ ifstream 
-ifstream input("list_of_student.txt");
+ifstream input(argv[1]);
 if(input)cout<<"File is opdened"<<endl;
 if(!input) cout<<"file is not opened"<<endl;
 
@@ -60,7 +61,7 @@ for(int i = 0 ; i<no_of_student ; i++){
 
 }
 //output file
-
+ofstream output("answer.txt" , ios::trunc);
 
 output<<"Rank of students according to question :-"<<endl;
 output<<endl;
@@ -94,7 +95,14 @@ nameOfStudent[outer] = s ;
 }
 
 
-create(marksOfStudent , idOfStudent , nameOfStudent,no_of_student);
-display(first);
+create(marksOfStudent , idOfStudent , nameOfStudent,no_of_student);int k = 0 ;
+node *ptr = first;
+ while (ptr!=nullptr)
+    {output<<"RANK "<<k<<" : "<<ptr->name<<endl;
+    k++;
+       
+        ptr=ptr->next ;
+        /* code */
+    }
 
 return 0 ;}

@@ -1,7 +1,7 @@
 Rank of students according to question :-
 
-RANK 1 : sourish
-RANK 2 : srijan
-RANK 3 : soham
+RANK 0 : sourish
+RANK 1 : soham
+RANK 2 : srushti
+RANK 3 : srijan
 RANK 4 : som
-RANK 5 : srushti
