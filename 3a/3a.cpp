@@ -44,7 +44,7 @@ int main(){
 // reading a file
 // c++ ifstream 
 ifstream input("list_of_student.txt");
-if(input)cout<<"File is opened"<<endl;
+if(input)cout<<"File is opdened"<<endl;
 if(!input) cout<<"file is not opened"<<endl;
 
 int no_of_student;
