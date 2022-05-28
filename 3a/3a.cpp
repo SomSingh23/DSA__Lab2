@@ -98,7 +98,7 @@ nameOfStudent[outer] = s ;
 create(marksOfStudent , idOfStudent , nameOfStudent,no_of_student);int k = 0 ;
 node *ptr = first;
  while (ptr!=nullptr)
-    {output<<"RANK "<<k<<" : "<<ptr->name<<endl;
+    {output<<"RANK "<<k+1<<" : "<<ptr->name<<endl;
     k++;
        
         ptr=ptr->next ;
